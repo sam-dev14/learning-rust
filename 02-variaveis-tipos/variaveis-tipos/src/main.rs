@@ -2,13 +2,14 @@
 
 /*
 Comentátios
-Várias 
+Várias
 linhas
-*/ 
+*/
+
+mod dados_primitivos;
 
 // O compilador infere (mais nem sempre) qual tipo de dado a variável está usando. Normalmente a comunidade deixa ele inferir, somente quando chega em funções e métodos que o desenvolvedor deve informar o tipo.
 fn main() {
-
     // Variaveis
     let mut x: i32 = 10; // Signed, Aceita positivo e negativo.
     let y: u32 = 8; // Unsigned, ou seja não aceita números negativos.
@@ -26,7 +27,7 @@ fn main() {
     println!("X é {x}, Y é {y}, Z é {z}");
 
     // Mutabilidade.
-    x = 11; 
+    x = 11;
     // Não permite que eu declare um novo valor a uma variável existente, então eu tenho que declarar como mutável (mut) para conseguir alter o valor da variável.
 
     println!("X é {x}");
@@ -37,15 +38,12 @@ fn main() {
     println!("Nome é: {name}");
     println!("X é {x}");
 
-
     {
-
         // Escopo que muda o nome para João.
         let name: &str = "João";
         let base_calculo = 2;
         println!("Nome é: {name}");
         x = 1000 * base_calculo;
-
     }
 
     // Vai quebrar pois foi definida apenas no escopo interno.
@@ -73,5 +71,4 @@ fn main() {
     // Char
     let primeira_leta: char = 'A';
     println!("Primeira letra é: {primeira_leta}");
-
 }
