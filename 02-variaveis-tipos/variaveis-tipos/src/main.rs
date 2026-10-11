@@ -6,9 +6,10 @@ Várias
 linhas
 */
 
+mod dados_compostos; 
 mod dados_primitivos;
 
-// O compilador infere (mais nem sempre) qual tipo de dado a variável está usando. Normalmente a comunidade deixa ele inferir, somente quando chega em funções e métodos que o desenvolvedor deve informar o tipo.
+// O compilador infere (mas nem sempre) qual tipo de dado a variável está usando. Normalmente a comunidade deixa ele inferir, somente quando chega em funções e métodos que o desenvolvedor deve informar o tipo.
 fn main() {
     // Variaveis
     let mut x: i32 = 10; // Signed, Aceita positivo e negativo.
@@ -69,6 +70,9 @@ fn main() {
     println!("Tentativas: {TENTATIVAS}");
 
     // Char
-    let primeira_leta: char = 'A';
-    println!("Primeira letra é: {primeira_leta}");
+    let primeira_letra: char = 'A';
+    println!("Primeira letra é: {primeira_letra}");
+
+    dados_compostos::dados_compostos();
+    dados_primitivos::dados_primitivos();
 }
